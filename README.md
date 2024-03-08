@@ -2,23 +2,9 @@
 
 Pawzzy
 
+a![titleImagePawzzy](https://github.com/Yeetcoding/2024-Capstone-Project---Pawzzy/assets/77801962/17148ec4-9c0f-4555-a576-9ad90b6c9e11)
+
 By Lincoln Willison and Chase Smith
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -27,18 +13,21 @@ Overview
 Pawzzy will be an automated cat entertainment system, designed to eliminate your cat’s boredom while you are gone. The system timing will be determined based on a simple user input in the form of a timer. Once the desired time set by the human is reached, the cat toys will activate. 
 	Pawzzy will consist of 4 different systems, The Arm toy, the Laser, the Obstacle Detection System, and the Treat Dispenser, each working together to entice and entertain the cat. The central box, where all of the components will be housed, will be made of either wood, cardboard, or foam with weights on the bottom so that it won't move around during its session.  
 
-Fig. 1
+Fig 1
 
-	The Arm Toy will be the main attraction, as it will control the toy that the cat chases. It will be rotated on 2 axes controlled each by a servo motor, so it could move up, down, left, and right, as shown in Fig 2. There will also be a reel controlled by a motor to control the reach of the toy, also shown in Fig 2. This reel will work in function with the arm to cast out the toy like a fishing line, then reel the toy in as the code dictates. The reel motor will also have an encoder, so that when the reel cannot reel in the toy if the cat captures the toy, the Arduino will know and can make decisions based off of that. 
+
+The Arm Toy will be the main attraction, as it will control the toy that the cat chases. It will be rotated on 2 axes controlled each by a servo motor, so it could move up, down, left, and right, as shown in Fig 2. There will also be a reel controlled by a motor to control the reach of the toy, also shown in Fig 2. This reel will work in function with the arm to cast out the toy like a fishing line, then reel the toy in as the code dictates. The reel motor will also have an encoder, so that when the reel cannot reel in the toy if the cat captures the toy, the Arduino will know and can make decisions based off of that. 
 
 Fig 2
 
-	The Laser will be a separate system that is also controlled by two servos. The laser will be mounted on the two servos and point to various spots on the ground, as shown in Fig 3.
+The Laser will be a separate system that is also controlled by two servos. The laser will be mounted on the two servos and point to various spots on the ground, as shown in Fig 3.
 
 
 Fig 3
 
-	The Obstacle detection system will be composed of an ultrasonic sensor and a servo. The servo will move the sensor in a semicircle, and the data collected from the sensor will be inputted into the Arduino. We have not yet determined where the sensor will be on the body, as the answer is better decided on testing.
+The![titleImagePawzzy](https://github.![titleImagePawzzy](https://github.com/Yeetcoding/2024-Capstone-Project---Pawzzy/assets/77801962/4d896445-69d8-418c-9201-d88684f20821)
+com/Yeetcoding/2024-Capstone-Project---Pawzzy/assets/77801962/d67ea807-3d6d-4a88-879c-6ed4d71863a3)
+ Obstacle detection system will be composed of an ultrasonic sensor and a servo. The servo will move the sensor in a semicircle, and the data collected from the sensor will be inputted into the Arduino. We have not yet determined where the sensor will be on the body, as the answer is better decided on testing.
 The Treat Dispenser will dispense treats based on what happens to the toy, and how many treats the cat has already gotten. It will be controlled by a servo.  
 
 
