@@ -2,8 +2,8 @@
 
 Servo scanner; //name and identify servo
 
-const int out = 12; // set ultrasonic sensor Pin 
-const int in = 13; // set ultrasonic sensor pin
+const int out = 5; // set ultrasonic sensor Pin 
+const int in = 6; // set ultrasonic sensor pin
 int pos = 0; // starting value of servo pin
 long dur; 
 long dis;
@@ -44,7 +44,7 @@ void loop()
     Serial.print(". Servo's angle: ");
     Serial.println(pos);
   } else {
-    if (pos < 180 && returningToZero == false)
+    if (pos < 180 && returningToZero == false) //otherwise
     {
       scanner.write(pos);
       pos += 10;
