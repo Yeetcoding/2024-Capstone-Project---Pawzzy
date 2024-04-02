@@ -44,7 +44,7 @@ void loop()
     Serial.print(". Servo's angle: ");
     Serial.println(pos);
   } else {
-    if (pos < 180 && returningToZero == false) //otherwise
+    if (pos < 180 && returningToZero == false) // otherwise, continue to rotate servo
     {
       scanner.write(pos);
       pos += 10;
@@ -64,7 +64,7 @@ void loop()
   delay(200);
 }
 
-long microsecondsToCentimeters(long microseconds)
+long microsecondsToCentimeters(long microseconds) // convert signal to distance
 {
   return microseconds / 29.155 / 2;
 }
