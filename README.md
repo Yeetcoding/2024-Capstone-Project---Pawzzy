@@ -6,6 +6,8 @@
 
 **By Chase Smith and Lincoln Willison**
 
+May 15th, 2024
+
 ### Project Overview
 
 This robot, named *Pawzzy*, is meant to entertain your cat while you, the owner, are away. One simple tap on your phone, and you don't have to worry about your cat 
@@ -24,6 +26,21 @@ As the toy is being reeled in, the Ultrasonic Sensor at the bottom of the box sh
 it harder for the cat.
 
 < insert fig.3 (Ultrasonic Sensor) here >
+
+### System Details
+
+![Final_Overview_Drawing](https://github.com/Yeetcoding/2024-Capstone-Project---Pawzzy/assets/77801962/a1d39e91-4e81-40c9-bdd8-22313369d00c)
+
+### Design Evaluation
+
+### Parts List
+
+### Lessons Learned
+
+
+### Building Instructions
+
+### 
 
 
 
