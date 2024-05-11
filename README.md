@@ -17,15 +17,18 @@ As shown in fig.1, the robot has a launch arm, where the toy is attached to movi
 toy is launched at a desired distance. 
 
 < insert fig.1 (launch arm) here >
+*Fig. 1*
 
 Then the toy is slowly reeled in as the arm is moved around on the rotating plate, shown in fig.2.
 
 < insert fig.2 (rotating plate) here >
+*Fig. 2*
 
 As the toy is being reeled in, the Ultrasonic Sensor at the bottom of the box shown in fig.3 moves close to the direction of the toy, so that if the cat gets close the toy can react and make 
 it harder for the cat.
 
 < insert fig.3 (Ultrasonic Sensor) here >
+*Fig. 3*
 
 ### System Details
 
@@ -37,16 +40,21 @@ The Robot consists of 2 main systems, the Throwing System and a Detection System
 The software for the project is written in Arduino C++, and it used with 2 microcrontrollers, the Node ESP-8266 1.0 and the Arduino Nano. The ESP is used to receive signals from the phone controller of the user and activate the system, as well as control the arm. Fig.5 shows the process and logic implimented in the ESP. 
 
 ![Pawzzy_FlowC_Transm](https://github.com/Yeetcoding/2024-Capstone-Project---Pawzzy/assets/77801962/dcd4d221-0082-4c01-916b-117aa6a327fc)
+
 *Fig.5*
 
 The Nano is in charge of intaking data from the Detection system and moving the sensor and arm point in the right direction, to help avoid the cat and moce the toy around. Fig.6 shows the process and logic implimented in the Nano, as well as how it makes decisions based on input.
+
+![Pawzzy_FlowC_Receiver](https://github.com/Yeetcoding/2024-Capstone-Project---Pawzzy/assets/77801962/5c467d43-5346-45a2-b94f-f99de2aaa4d5)
+
+*Fig.6*
+
 
 ### Design Evaluation
 
 ### Parts List
 
 ### Lessons Learned
-
 
 ### Building Instructions
 
