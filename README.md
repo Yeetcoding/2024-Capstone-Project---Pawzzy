@@ -49,6 +49,12 @@ The Nano is in charge of intaking data from the Detection system and moving the 
 
 *Fig.6*
 
+The Arm Servo is connected to the ESP for control and the 12V battery for power. The Reel Motor is connected to the L289N Motor Control Board, which is controlled by the ESP and is powered by the 12V battery. The LED is connected to the ESP to show the received "ON" signal. The Distance Sensor, Arm Point servo, and Sensor servo are all controlled and powered by the Arduino Nano. Both boards are powered by power cables that plug into an extension cable, which plugs striaght into the wall. The two boards share a Serial connection over the ESP's TX (1) pin, the Nano's RX (0) pin, and a shared ground. All of the electronic wiring is shown on fig. 7. 
+
+![IMG_3379](https://github.com/Yeetcoding/2024-Capstone-Project---Pawzzy/assets/77801962/adf66dbe-9762-46b7-8617-3a395ed4b5d2)
+
+*Fig.7*
+
 
 ### Design Evaluation
 
