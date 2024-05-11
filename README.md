@@ -55,8 +55,31 @@ The Arm Servo is connected to the ESP for control and the 12V battery for power.
 
 *Fig.7*
 
-
 ### Design Evaluation
+
+**Overall Evaluation**
+
+Pawzzy was made to solve two problems: Cat boredom, and the guilt the owner feels when they know their cat has had nothing to do while they're gone. To fufill this goal, we had to make a robot that would be reliable both locally with the randomness of the cat and with the distance of the owner. Our robot has many traits that make it reliable, fun, and beneficial for everyone invovled. We made the robot chassis out of wood to give it a stable and study base. We gave it rubber feet for maximum stability, grip, turn resistence, and so it doesn't scratch any surfaces it is on. We gave it a light blue color of paint to make it visually appealing but also non-threatening. We rounded out the edges of the robot and smoothed over rough surfaces, so that it couldn't hurt anyone or anything brushing against it. Lastly, we use a simply ON/OFF control system for the user, so that the user is only encountered with simplicity and fun times, while the robot does all the hard work. Blynk is a reliable and trusted service that works very fast and reliably, and is very user friendly. 
+
+**Output Display**
+
+For the category Output Display, Pawzzy uses a single LED on the side of the frame to indicate when the robot has received the user's input. This allows for more understanding of the robot's status to the human, as the human knows that the robot has received the signal to activate. The L298N Motor controller also has an LED to display when power is turned on, but this is hidden from the human since the board is inside the box. 
+
+**Manual User Input**
+
+For the category Manual User Input, Pawzzy uses two different types of input: One through Blynk, where the user presses a digital button to activate the robot, and the other being a physical toggle switch on the side of the frame for controlling the 12V battery. The Blynk input is truly amazing as it allows the user to activate the machine from anywhere with an internet connection, which is perfect for when you are traveling and are away from your cat. At the airport, and want to make sure your cat is not bored? Simply go onto your phone, pressed the "ON" button, and forget about your worries.
+
+**Automatic Sensor**
+
+For the category Automatic Senor, Pawzzy an Ultrasonic Sensor, which when combined with a rotating servo gives the robot a sense of if the cat is close to the toy. This sensor senses distance, whcih we use to detect if the cat is close to the toy by closely aligning the senor and the toy. Using this input, the robot is able to move the toy away from the cat by itself, thereby making it harder and more engaging for the cat, as well as introducing more variables to make the moving process more random. 
+
+**Actuators, Mechanisms, & Hardware**
+
+For the category Actuators, Mechanisms, & Hardware, Pawzzy uses a total of 3 servos and one DC motor. These motors move the arm, move the ultrasonic sensor, and point the arm in the right direction. Each of these motors are aligned and placed so that they fufill their task accordingly, give precise positions, and are not moved under pressure. We use 3d prints for housing and placement, and we use wood for builds like the arm and the box that will be placed under stress, giving it a custom and fitting but rigid design. 
+
+**Logic, Processing, and Control**
+
+For the category Logic, Processing, and Control, Pawzzy uses a total of 3 boards, 2 with code in Arduino C++, 1 for controlling power and the DC motor: The Node ESP 8266 1.0, the Arduino Nano, and the L289N. Since Pawzzy is taking in a contant intake through the ultrasonic sensor and Blynk, it is important that the workload be split between 2 boards, so that one does not get clogged with data and that latency does not get in the way of executing crucial functions at certain times. Our boards are still able to communicate fast and efficiently through the Serial communication pins, where the position for the arm and the Ultrasonic Sensor is dicated by the ESP and received by the Nano, and all systems are able to use data from the others. Because of this two board system, we are able to use the constant input of the Ultrasonic Sensor to react quickly if there is a cat near the toy. The third board, the L289N, allows for us to draw power from a battery that we wouldn't have gotten from the nano or ESP themselves. 
 
 ### Parts List
 
