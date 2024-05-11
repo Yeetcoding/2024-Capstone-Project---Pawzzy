@@ -29,7 +29,17 @@ it harder for the cat.
 
 ### System Details
 
-![Final_Overview_Drawing](https://github.com/Yeetcoding/2024-Capstone-Project---Pawzzy/assets/77801962/a1d39e91-4e81-40c9-bdd8-22313369d00c)
+The Robot consists of 2 main systems, the Throwing System and a Detection System. As shown in fig.4, the Throwing System consists of the Arm System, The Reel System, and the Turntable, while the Detection System consists of the Distance Sensor and the Servo with it. The Throwing System is responsable for throwing, reeling in, and moving the cat toy, whereas the Detetion System is responsible for detecting the cat and initiating an appropriate response to with the rest of the machine.
+
+![Final_Drawing_Overveiw](https://github.com/Yeetcoding/2024-Capstone-Project---Pawzzy/assets/77801962/061eaaa7-deee-4a4c-ae49-4577d6c37f84)
+*Fig.4*
+
+The software for the project is written in Arduino C++, and it used with 2 microcrontrollers, the Node ESP-8266 1.0 and the Arduino Nano. The ESP is used to receive signals from the phone controller of the user and activate the system, as well as control the arm. Fig.5 shows the process and logic implimented in the ESP. 
+
+![Pawzzy_FlowC_Transm](https://github.com/Yeetcoding/2024-Capstone-Project---Pawzzy/assets/77801962/dcd4d221-0082-4c01-916b-117aa6a327fc)
+*Fig.5*
+
+The Nano is in charge of intaking data from the Detection system and moving the sensor and arm point in the right direction, to help avoid the cat and moce the toy around. Fig.6 shows the process and logic implimented in the Nano, as well as how it makes decisions based on input.
 
 ### Design Evaluation
 
@@ -39,9 +49,5 @@ it harder for the cat.
 
 
 ### Building Instructions
-
-### 
-
-
 
 
