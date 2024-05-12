@@ -63,23 +63,46 @@ Pawzzy was made to solve two problems: Cat boredom, and the guilt the owner feel
 
 **Output Display**
 
-For the category Output Display, Pawzzy uses a single LED on the side of the frame to indicate when the robot has received the user's input. This allows for more understanding of the robot's status to the human, as the human knows that the robot has received the signal to activate. The L298N Motor controller also has an LED to display when power is turned on, but this is hidden from the human since the board is inside the box. 
+For the category Output Display, Pawzzy uses a single LED on the side of the frame to indicate when the robot has received the user's input, as shown in Fig.8. This allows for more understanding of the robot's status to the human, as the human knows that the robot has received the signal to activate. The L298N Motor controller also has an LED to display when power is turned on, but this is hidden from the human since the board is inside the box. 
+
+< insert Fig.8 (LED) here >
+*Fig.8*
 
 **Manual User Input**
 
-For the category Manual User Input, Pawzzy uses two different types of input: One through Blynk, where the user presses a digital button to activate the robot, and the other being a physical toggle switch on the side of the frame for controlling the 12V battery. The Blynk input is truly amazing as it allows the user to activate the machine from anywhere with an internet connection, which is perfect for when you are traveling and are away from your cat. At the airport, and want to make sure your cat is not bored? Simply go onto your phone, pressed the "ON" button, and forget about your worries.
+For the category Manual User Input, Pawzzy uses two different types of input: One through Blynk (shown in Fig.9), where the user presses a digital button to activate the robot, and the other being a physical toggle switch on the side of the frame for controlling the 12V battery. The Blynk input is truly amazing as it allows the user to activate the machine from anywhere with an internet connection, which is perfect for when you are traveling and are away from your cat. At the airport, and want to make sure your cat is not bored? Simply go onto your phone, pressed the "ON" button, and forget about your worries.
+
+< insert Fig.9 (Blynk Screenshots) here >
+*Fig.9*
+< insert Fig.10 (Toggle Switch) here >
+*Fig.10*
 
 **Automatic Sensor**
 
-For the category Automatic Senor, Pawzzy an Ultrasonic Sensor, which when combined with a rotating servo gives the robot a sense of if the cat is close to the toy. This sensor senses distance, whcih we use to detect if the cat is close to the toy by closely aligning the senor and the toy. Using this input, the robot is able to move the toy away from the cat by itself, thereby making it harder and more engaging for the cat, as well as introducing more variables to make the moving process more random. 
+For the category Automatic Senor, Pawzzy uses an Ultrasonic Sensor, as shown in Fig.11. When combined with a rotating servo, this sensor gives the robot a sense of if the cat is close to the toy. This sensor senses distance, which we use to detect if the cat is close to the toy by closely aligning the senor and the toy. Using this input, the robot is able to move the toy away from the cat by itself, thereby making it harder and more engaging for the cat, as well as introducing more variables to make the moving process more random. 
+
+< insert Fig.11 (Ultrasonic Sensor) here >
 
 **Actuators, Mechanisms, & Hardware**
 
-For the category Actuators, Mechanisms, & Hardware, Pawzzy uses a total of 3 servos and one DC motor. These motors move the arm, move the ultrasonic sensor, and point the arm in the right direction. Each of these motors are aligned and placed so that they fufill their task accordingly, give precise positions, and are not moved under pressure. We use 3d prints for housing and placement, and we use wood for builds like the arm and the box that will be placed under stress, giving it a custom and fitting but rigid design. 
+For the category Actuators, Mechanisms, & Hardware, Pawzzy uses a total of 3 servos and one DC motor, which are all shown in Fig.12. These motors move the arm, move the ultrasonic sensor, and point the arm in the right direction. Each of these motors are aligned and placed so that they fufill their task accordingly, give precise positions, and are not moved under pressure. We use 3d prints for housing and placement, and we use wood for builds like the arm and the box that will be placed under stress, giving it a custom and fitting but rigid design. 
+
+< insert Fig.12 (Servos and Motors) >
 
 **Logic, Processing, and Control**
 
-For the category Logic, Processing, and Control, Pawzzy uses a total of 3 boards, 2 with code in Arduino C++, 1 for controlling power and the DC motor: The Node ESP 8266 1.0, the Arduino Nano, and the L289N. Since Pawzzy is taking in a contant intake through the ultrasonic sensor and Blynk, it is important that the workload be split between 2 boards, so that one does not get clogged with data and that latency does not get in the way of executing crucial functions at certain times. Our boards are still able to communicate fast and efficiently through the Serial communication pins, where the position for the arm and the Ultrasonic Sensor is dicated by the ESP and received by the Nano, and all systems are able to use data from the others. Because of this two board system, we are able to use the constant input of the Ultrasonic Sensor to react quickly if there is a cat near the toy. The third board, the L289N, allows for us to draw power from a battery that we wouldn't have gotten from the nano or ESP themselves. 
+For the category Logic, Processing, and Control, Pawzzy uses a total of 3 boards, 2 with code in Arduino C++, 1 for controlling power and the DC motor: The Node ESP 8266 1.0, the Arduino Nano, and the L289N, all of which are shown in Fig.13. Since Pawzzy is taking in a contant intake through the ultrasonic sensor and Blynk, it is important that the workload be split between 2 boards, so that one does not get clogged with data and that latency does not get in the way of executing crucial functions at certain times. Our boards are still able to communicate fast and efficiently through the Serial communication pins, where the position for the arm and the Ultrasonic Sensor is dicated by the ESP and received by the Nano, and all systems are able to use data from the others. Because of this two board system, we are able to use the constant input of the Ultrasonic Sensor to react quickly if there is a cat near the toy. The third board, the L289N, allows for us to draw power from a battery that we wouldn't have gotten from the nano or ESP themselves. 
+
+< insert Fig.13 (Boards) >
+
+**Additonal Adjustments**
+
+When designing this, we made sure to do some thinking about how we would put everything together, instead of just throwing it all into a box. We use wood to make a rigid structure, and sand down the edges to make a good and quality feel. We soldered all of the wire joints and components together, so that the internal structure would have a reliable electrical system. We also put thought into the color of our paint - when researching a color that cats like, we found that blue was a common one. We picked our robot to have that blue for its inviting and friendly appeal, so that it would look good to the cat but also the human. We also made sure that the structure and construction of this project would ensure that the different components would work together flawlessly, which it does, as no wires get in the way of the sensor or turntable, and each moving part moves freely without any unecessary friction, and has the suppor that it needs to remain reliable. We are also able to make all of this at a reasonable price, and have no issues with running too close to the budget limit.
+
+Because of the above reasons, we believe we qualify for these additives:
+  - +10% for Construction, Quality, Aestetics, and Visual Appeal
+  - +10% for Level of Effort
+  - +10% for Construction/Production Cost
 
 ### Parts List
 
