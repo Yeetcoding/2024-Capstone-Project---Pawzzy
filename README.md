@@ -105,9 +105,33 @@ Because of the above reasons, we believe we qualify for these additives:
   - +10% for Construction/Production Cost
 
 ### Parts List
+- Acrylic Disk, $4.50
+- Servo (x3), $13.50
+- Node ESP 8266 1.0, $5.00
+- Arduino Nano, $6.5
+- L289N Motor Controller, $3.00
+- DC Motor, $1.40
+- Solder Board (x2), $4.4
+- Door Hinge, $1.16
+- Battery Pack, $6.00
+- Plywood, $10
+- Marble (x3), $0.30
+- Ultrasonic Sensor, $1.80 
 
 ### Lessons Learned
 
+- **Beware of the data input from the Ultrasonic Sensor**: During both of our previous capstone projects, we learned how constantly using ultrasonic sensors in a project bog down the time efficiency of the microcontrollers, so we made sure to institute a system that would be able to handle this situation.
+- **You can speed up motors with a higher power source but still control it with a microcontroller**: When trying to make the arm servo go faster in order to launch the toy, Chase figured out that if you connect the ground of the Arduino and Power source together and attach the servo's data pin to the Arduino, you can control the servo but it will go significantly faster.
+- **Plan out your work schedule and what you are going to make ahead of time**: Both of us have benefited from planning ahead of time what each of us will do with the time we have. In each of our own previous capstone projects, neiter of us planned ahead and barely got work done in time, but this year we were able to work efficiently both as a tem and as individuals because of our planning.
+- **Take things step by step**: A concept that is often reiterated throughout all of engineering, it applies also to our situation. The software itself is complex and can get very confusing, so taking it step by step deliberately (especially the very small steps, such as simple Serial communication over a wire or hooking up a servo by itself) and not rushing ahead really helped to make sure all of the "foundations" were sound.
+- **Pick a nice color of paint. Make it look 'perty**: Something that we both liked is how well our project looked when we finshed, especially after we put serious thought and effort into what we'd like it to look like. Making it look better, regardless of functionality (but not at the cost of), made us appriciate it more and make it look more friendly and awesome. This was a big difference from our past projects, as our previous projects looked more 'thrown' together than 'put' together.
+- **Help others when you can**: Working in a robotics classroom environment like the one in Windosr helps you be around many different people with the same mindset, which means you can have many different opportunities to learn outside/other than the typical lecture to assignment structure. Being able to help others gives you a break from working on your project, gives you a look at other cool projects, and helps you form connections that might pay off later. After all, we know that we appreiciate a helping hand, so why not be that helping hand for another when you can?
+- **Don't be a wimp - find a good partner**: Having a good partner changes the game with these capstone projects, as you can get a second view on the project instanly but you can also split the workload with your other partner. Even if you think you can do great yourself, you can do double with a good partner. Both of us chose to go solo with our previous projects, and work together for this one, and the difference is huge because both of us put pour best foot forward and worked hard together. Having a partner is definitely the best choice if you can find a good one. 
+
 ### Building Instructions
+
+**If for some reason you've read through all of this and decided you want a crack at making Pawzzy, here are some "simple" steps to guide you along the way:**
+1. 
+
 
 
