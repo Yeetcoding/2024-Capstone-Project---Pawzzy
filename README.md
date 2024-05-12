@@ -131,7 +131,18 @@ Because of the above reasons, we believe we qualify for these additives:
 ### Building Instructions
 
 **If for some reason you've read through all of this and decided you want a crack at making Pawzzy, here are some "simple" steps to guide you along the way:**
-1. 
+1. Gather Supplies and Parts (parts listed above)
+2. Put the Arm Point Servo in the middle of the lid, add on the acrylic cirlce and place all of the top components on the cirlce
+3. Wrap all wires in electrical tape, then feed all wires from the top components through the holes in the back of the circle and lid
+4. Once all wires are pulled through, solder everything to the appropriate breadboard
+5. Attach all physical holders, such as the top assemblies that hold the motors or the dowel ends or the Ultrasonic sensor holder
+6. Hot glue all boards and stationary platforms within (but not on the top of) the box to edges of the box
+7. Drill 2 holes in opposite sides of the box, one bigger and one smaller
+8. Place the High Voltage switch into the bigger of the drilled holes and screw in
+9. Glue the LED into the smaller hole 
+10. Close the lid of the box, and screw in all top components
+11. String through the fishing line and attatch the toy to the end of the line, making sure to pass through all of the loops on the arm
+12. Close the box and make sure everything closes fine
 
 
 
