@@ -130,7 +130,7 @@ Because of the above reasons, we believe we qualify for these additives:
 
 ### Building Instructions
 
-**If for some reason you've read through all of this and decided you want a crack at making Pawzzy, here are some "simple" steps to guide you along the way:**
+**If for some reason you've read through all of this and decided you want a crack at making Pawzzy, here are some simple steps to guide you along the way:**
 1. Gather Supplies and Parts (parts listed above)
 2. Put the Arm Point Servo in the middle of the lid, add on the acrylic cirlce and place all of the top components on the cirlce
 3. Wrap all wires in electrical tape, then feed all wires from the top components through the holes in the back of the circle and lid
