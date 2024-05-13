@@ -118,7 +118,8 @@ Because of the above reasons, we believe we qualify for these additives:
 - Marble (x3), $0.30
 - Ultrasonic Sensor,  HC-SR04, $1.80
 - Power Strip, $5
-- Blue paint, 1.8, Ace Hardware
+- Blue paint, $1.8, Ace Hardware
+- Dowel, $2, Ace Hardware
 
 ### Lessons Learned
 
