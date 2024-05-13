@@ -106,7 +106,7 @@ Because of the above reasons, we believe we qualify for these additives:
 
 ### Parts List
 - Acrylic Disk, $4.50
-- Servo (x3), $13.50
+- Servo, MG 996R (x3), $13.50
 - Node ESP 8266 1.0, $5.00
 - Arduino Nano, $6.5
 - L289N Motor Controller, $3.00
@@ -116,7 +116,7 @@ Because of the above reasons, we believe we qualify for these additives:
 - Battery Pack, $6.00
 - Plywood, $10
 - Marble (x3), $0.30
-- Ultrasonic Sensor, $1.80 
+- Ultrasonic Sensor,  HC-SR04, $1.80 
 
 ### Lessons Learned
 
