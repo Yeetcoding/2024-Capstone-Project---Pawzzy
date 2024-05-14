@@ -105,21 +105,21 @@ Because of the above reasons, we believe we qualify for these additives:
   - +10% for Construction/Production Cost
 
 ### Parts List
-- Acrylic Disk, B0CC83YLVT, Hongwang018, $4.50
-- Servo, MG 996R (x3), $13.50
-- Node ESP 8266 1.0, $5.00
+- Hongwang018 - Acrylic Disk, B0CC83YLVT, $4.50
+- MG 996R Servo (x3), $13.50
+- Node - ESP 8266 1.0, $5.00
 - Arduino Nano, $6.5
-- L289N Motor Controller, $3.00
-- DC Motor, $1.40
-- Solder Board (x2), $4.4
+- BOJACK - L289N Motor Controller, $3.00
+- AEDIKO - DC Motor, $1.40
+- Gikfun - Solder Board (x2), $4.4
 - Door Hinge, $1.16
-- Battery Pack, $6.00
+- QTEATAK - 8 AA Battery Pack, $3.50
 - Plywood, $10
 - Marble (x3), $0.30
-- Ultrasonic Sensor,  HC-SR04, $1.80
+- EPLZON - Ultrasonic Sensor HC-SR04, $2.00
 - Power Strip, $5
-- Blue paint, $1.8, Ace Hardware
-- Dowel, $2, Ace Hardware
+- Ace Hardware - Blue paint, $1.8, 
+- Ace Hardware - Dowel, $2
 
 ### Lessons Learned
 
