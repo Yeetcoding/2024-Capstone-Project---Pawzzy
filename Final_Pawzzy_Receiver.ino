@@ -1,102 +1,72 @@
-// Creates Identification for the Blynk system
-#define BLYNK_TEMPLATE_ID "TMPL2SN2Sv__H"
-#define BLYNK_TEMPLATE_NAME "PawzzyESP"
-#define BLYNK_AUTH_TOKEN "Q0CI0nawhmAF8260h05qQLF5BY6Zh9Hb"
+#include <Servo.h> // Includes the servo library
 
-// Includes all necessary libraries
-#include <ESP8266WiFi.h>
-#include <BlynkSimpleEsp8266.h>
-#include <Servo.h>
+// Sets pins for the ultrasonic sensor
+#define echoPin 5 
+#define trigPin 6
 
-// Creates the name and password of the network the ESP needs to connect to
-char ssid[] = "mechlab";
-char pass[] = "etufh89959"; 
+// Sets the servos to their correct pins
+Servo followSensor; 
+Servo armPoint;
 
-bool blynk_input = false; // bool for user input
-bool arm_throw = false; // bool for knowing if the arm has thrown the toy or not
+int serialInput = 90; // Int for reading Serial input
+int distance; // Int for reading distance input from the sensor
+int react_counter = 2; // Int for position calculations
 
-int blynk_input_LED = D7; // int for the output LED pin
-int arm_pos = 90; // int for the position of the arm 
-int arm_point_pos = 90; // int for the transmitted number used to determine direction of the arm
-int move_time = 700;
+long duration; // Used to calculate distance using input from the sensor
 
-Servo arm; // Sets up the Arm servo
+void setup() {
+  Serial.begin(115200); // Sets Serial communication to correct speed
 
-void setup(){
-  Blynk.begin(BLYNK_AUTH_TOKEN, ssid, pass); // Connects ESP to Internet
-  Serial.begin(115200); // Sets up Serial communication
-
-  pinMode(blynk_input_LED,OUTPUT); // Sets up LED 
+  pinMode(13,OUTPUT); // LED output pin
+  pinMode(trigPin, OUTPUT); // Trig pin for sensor
+  pinMode(echoPin, INPUT); // Echo pin for sensor
   
-  // Sets up control pins leading to the L289N board
-  pinMode(D0,OUTPUT);
-  pinMode(D1,OUTPUT);
-  pinMode(D2,OUTPUT);
-  
-  arm.attach(D3); // Sets up servo to pin D3
-  arm.write(100);
+  followSensor.attach(9); // Pin for directing the servo that turns the sensor
+  armPoint.attach(10); // Pin for directing where the arm points and how the turntable turns
+
+  // Setting starting positions
+  followSensor.write(90);
+  armPoint.write(90);
+
 }
 
-// Function based off of Blynk input
-BLYNK_WRITE(V0){
-  int i = param.asInt(); // local variable to check status of input
-  
-  // If user turns on button, light up LED and change bool to TRUE
-  if (i == 1){
-    digitalWrite(blynk_input_LED, HIGH);
-    blynk_input = true; 
-  }
-  // Otherwise, turn off LED and set bool to FALSE
-  else{
-    digitalWrite(blynk_input_LED, LOW);
-    blynk_input = false;
-  }
+// Function used to find distance from sensor
+void ult(){
+  digitalWrite(trigPin, LOW);
+  delayMicroseconds(2);
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin, LOW);
+  duration = pulseIn(echoPin, HIGH);
+  distance = duration * 0.034 / 2;
 }
 
-// Function to activate the string reel
-void reel_down(){
-  digitalWrite(D0,HIGH);
-  digitalWrite(D1,LOW);
-  analogWrite(D2,255);
-  return;
-}
+void loop() {
+  ult(); // Activate the ultrasonic sensor
 
-void reel_up(){
-  digitalWrite(D0,LOW);
-  digitalWrite(D1,HIGH);
-  analogWrite(D2,255);
-  return;
-}
-
-// Function for turning off the motor when called
-void reel_off(){
-  digitalWrite(D0,LOW);
-  digitalWrite(D1,LOW);
-  analogWrite(D2,0);
-  return; // Stop/check function
-}
-
-void loop(){
-  Blynk.run(); // Run all Blynk functions (connecting to internet, checking data)
-
-  // If the user turns on the button, output a random value through the Serial communication
-  if (blynk_input == true){
-    if (arm_throw == false){
-      arm.write(180);
-      reel_down();
-      delay(move_time);
-      reel_off();
-      arm_throw = true;
+  // If distance is less than 35, either go way to the left or way to the right depending on where you went last
+  if (distance < 35){
+    react_counter += 1;
+    if (react_counter % 2 == 0){
+      followSensor.write(60);
+      armPoint.write(60);
     }
     else{
-      arm_point_pos = random(60,121);
-      Serial.write(arm_point_pos);
-      delay(1000);
+      followSensor.write(120);
+      armPoint.write(120);
     }
-    
   }
-  else{
-    reel_off();
-    Serial.write(20);
+  // If no cat is detected, set the arm point and sensor to point at the received input number
+  else {
+    serialInput = Serial.read();
+    
+    if (serialInput != 20 and serialInput != -1 and serialInput != 1){
+      followSensor.write(serialInput);
+      armPoint.write(serialInput);
+    }
+    else if (serialInput == 20 or serialInput == -1 or serialInput == 1){
+      digitalWrite(13,LOW);
+    }
   }
 }
+
