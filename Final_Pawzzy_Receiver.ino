@@ -42,7 +42,7 @@ void ult(){
 void loop() {
   ult();
 
-  if (distance < 20){
+  if (distance < 35){
     react_counter += 1;
     if (react_counter % 2 == 0){
       followSensor.write(60);
@@ -65,4 +65,5 @@ void loop() {
     }
   }
 }
+
 
