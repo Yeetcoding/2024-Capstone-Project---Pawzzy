@@ -18,7 +18,7 @@ bool arm_throw = false; // bool for knowing if the arm has thrown the toy or not
 int blynk_input_LED = D7; // int for the output LED pin
 int arm_pos = 90; // int for the position of the arm 
 int arm_point_pos = 90; // int for the transmitted number used to determine direction of the arm
-int move_time = 500;
+int move_time = 500; // int for determining how long the reel will move for (hence how long to drop the toy for)
 
 Servo arm; // Sets up the Arm servo
 
@@ -34,7 +34,7 @@ void setup(){
   pinMode(D2,OUTPUT);
   
   arm.attach(D3); // Sets up servo to pin D3
-  arm.write(100);
+  arm.write(100); // Sets up a starting position
 }
 
 // Function based off of Blynk input
@@ -53,7 +53,7 @@ BLYNK_WRITE(V0){
   }
 }
 
-// Function to activate the string reel
+// Function to set the toy in the down position
 void reel_down(){
   digitalWrite(D0,HIGH);
   digitalWrite(D1,LOW);
@@ -61,6 +61,7 @@ void reel_down(){
   return;
 }
 
+// Function to recall the toy to the top if the setup needs to be repeated
 void reel_up(){
   digitalWrite(D0,LOW);
   digitalWrite(D1,HIGH);
@@ -79,8 +80,9 @@ void reel_off(){
 void loop(){
   Blynk.run(); // Run all Blynk functions (connecting to internet, checking data)
 
-  // If the user turns on the button, output a random value through the Serial communication
+  // If the user turns on the button then do this:
   if (blynk_input == true){
+    // If the arm hasn't been set, move into position and lower toy
     if (arm_throw == false){
       arm.write(180);
       reel_down();
@@ -88,12 +90,14 @@ void loop(){
       reel_off();
       arm_throw = true;
     }
+    // Otherwise, move the toy around  
     else{
       arm_point_pos = random(60,121);
       Serial.write(arm_point_pos);
     }
     
   }
+  // Otherwise (being the user has not pressed the digital button), turn the reel off and don't move
   else{
     reel_off();
     Serial.write(20);
