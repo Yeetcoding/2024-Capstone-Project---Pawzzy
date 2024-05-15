@@ -2,7 +2,8 @@
 
 # **PAWZZY**
 
-< insert title photo here >
+![2024_05_15_11_23_IMG_0230](https://github.com/Yeetcoding/2024-Capstone-Project---Pawzzy/assets/90796216/8c487ef8-7c71-478a-ad57-fbc8f9c2de43)
+
 
 **By Chase Smith and Lincoln Willison**
 
@@ -16,18 +17,21 @@ feeling lonely! As you would with a cat toy, this machine takes a toy on a strin
 As shown in fig.1, the robot has a launch arm, where the toy is attached to moving reel. Like a fishing rod, this arm rotates forward very fast, and the reel is turned on so that the 
 toy is launched at a desired distance. 
 
-< insert fig.1 (launch arm) here >
+![2024_05_15_11_21_IMG_0229](https://github.com/Yeetcoding/2024-Capstone-Project---Pawzzy/assets/90796216/37687838-51b9-43ee-b923-2bdeff926232)
+
 *Fig. 1*
 
 Then the toy is slowly reeled in as the arm is moved around on the rotating plate, shown in fig.2.
 
-< insert fig.2 (rotating plate) here >
+![2024_05_15_11_21_IMG_0228](https://github.com/Yeetcoding/2024-Capstone-Project---Pawzzy/assets/90796216/d958401b-19d0-49f6-a09e-8d8bd0e1e6da)
+
 *Fig. 2*
 
 As the toy is being reeled in, the Ultrasonic Sensor at the bottom of the box shown in fig.3 moves close to the direction of the toy, so that if the cat gets close the toy can react and make 
 it harder for the cat.
 
-< insert fig.3 (Ultrasonic Sensor) here >
+![2024_05_15_11_21_IMG_0227](https://github.com/Yeetcoding/2024-Capstone-Project---Pawzzy/assets/90796216/f47e4b0c-cd3d-4db6-a069-1287f32217c4)
+
 *Fig. 3*
 
 ### System Details
